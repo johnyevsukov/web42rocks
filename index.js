@@ -12,6 +12,12 @@ server.get('/api', (req, res) => {
     })
 })
 
+server.use((req, res) => {
+    res.status(404).json({
+        message: 'not found sorry'
+    })
+})
+
 server.listen(PORT, () => {
     console.log(`listening on ${PORT}`)
 })
